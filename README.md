@@ -1,5 +1,9 @@
 # SAFİR RESTORAN
-#
+
+
+Aşağıda, web sitemin bir ekran görüntüsünü bulabilirsiniz.
+
+![](https://github.com/ahmettari/safir-restoran/blob/main/Ads%C4%B1z%20tasar%C4%B1m.png)
 
 
 
