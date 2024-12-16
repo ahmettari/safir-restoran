@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyurular Yönetimi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+   <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            height: 100vh;
+            background-color: #592a22;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #4c241d;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #592a22;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .announcement-table {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button.add-announcement-btn {
+            background-color: #592a22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button.add-announcement-btn:hover {
+            background-color: #4c241d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f1f1f1;
+            color: #592a22;
+            font-weight: 600;
+        }
+
+        table td {
+            color: #333;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .status.active {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .status.inactive {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button.edit-btn, button.delete-btn {
+            padding: 8px 16px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button.edit-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button.delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button.edit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        button.delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admin.html" class="active"><i class="fa fa-dashboard"></i> Ana Sayfa</a>
+        <a href="kullaniciYonetimi.html"><i class="fa fa-users"></i> Kullanıcı Yönetimi</a>
+        <a href="duyurularAdmin.html"><i class="fa fa-bell"></i> Duyurular</a>
+        <a href="menuAdmin.html"><i class="fa fa-cutlery"></i> Menü Yönetimi</a>
+        <a href="index.html"><i class="fa fa-sign-out"></i> Çıkış</a>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container">
+            <h1>Duyurular Yönetimi</h1>
+            <div class="announcement-table">
+                <button class="add-announcement-btn" onclick="showAddAnnouncementForm()">Yeni Duyuru Ekle</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Başlık</th>
+                            <th>İçerik</th>
+                            <th>Durum</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="announcement-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>Yeni Kafe Menüsü</td>
+                            <td>Yeni menümüzle tanışın! Detaylar için tıklayın.</td>
+                            <td><span class="status active">Aktif</span></td>
+                            <td>
+                                <button class="edit-btn" onclick="editAnnouncement(1)">Düzenle</button>
+                                <button class="delete-btn" onclick="deleteAnnouncement(1)">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Duyuruları ekleme, düzenleme ve silme işlevleri
+        const announcements = [
+            {id: 1, title: 'Yeni Kafe Menüsü', content: 'Yeni menümüzle tanışın! Detaylar için tıklayın.', status: 'active'},
+            {id: 2, title: 'Çalışma Saatleri', content: 'Yeni çalışma saatlerimiz belirlenmiştir.', status: 'inactive'},
+        ];
+
+        // Duyuruları tabloya ekle
+        function loadAnnouncements() {
+            const tableBody = document.getElementById('announcement-table-body');
+            tableBody.innerHTML = '';
+            announcements.forEach(announcement => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${announcement.id}</td>
+                    <td>${announcement.title}</td>
+                    <td>${announcement.content}</td>
+                    <td><span class="status ${announcement.status}">${announcement.status === 'active' ? 'Aktif' : 'Pasif'}</span></td>
+                    <td>
+                        <button class="edit-btn" onclick="editAnnouncement(${announcement.id})">Düzenle</button>
+                        <button class="delete-btn" onclick="deleteAnnouncement(${announcement.id})">Sil</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Yeni duyuru ekleme
+        function showAddAnnouncementForm() {
+            const title = prompt('Duyuru Başlığı:');
+            const content = prompt('Duyuru İçeriği:');
+            const newAnnouncement = {
+                id: announcements.length + 1,
+                title: title,
+                content: content,
+                status: 'inactive'
+            };
+            announcements.push(newAnnouncement);
+            loadAnnouncements();
+        }
+
+        // Duyuruyu düzenleme
+        function editAnnouncement(announcementId) {
+            const announcement = announcements.find(a => a.id === announcementId);
+            const newTitle = prompt('Yeni Başlık:', announcement.title);
+            const newContent = prompt('Yeni İçerik:', announcement.content);
+            announcement.title = newTitle;
+            announcement.content = newContent;
+            loadAnnouncements();
+        }
+
+        // Duyuruyu silme
+        function deleteAnnouncement(announcementId) {
+            const announcementIndex = announcements.findIndex(a => a.id === announcementId);
+            if (announcementIndex !== -1) {
+                if (confirm('Bu duyuruyu silmek istediğinize emin misiniz?')) {
+                    announcements.splice(announcementIndex, 1);
+                    loadAnnouncements();
+                }
+            }
+        }
+
+        // Sayfa yüklendiğinde duyuruları göster
+        loadAnnouncements();
+    </script>
+</body>
+</html>

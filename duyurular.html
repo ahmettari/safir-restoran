@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safir Restoran - Duyurular</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+
+
+<style>
+.announcement-section {
+    background-color: #f8f9fa;
+}
+
+.carousel-inner .text {
+    padding: 20px;
+}
+
+.carousel-inner h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+.carousel-inner p {
+    color: #555;
+    font-size: 16px;
+}
+
+.carousel-inner img {
+    border: 2px solid #ddd;
+}
+
+/* Okları kenara taşıma */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev {
+    left: -5%; /* Okları sola taşır */
+}
+
+.carousel-control-next {
+    right: -5%; /* Okları sağa taşır */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+}
+
+
+.press-section{
+    margin-top: 80px;
+}
+
+.press-section .press-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.press-section .press-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.press-section .press-item:hover img {
+    transform: scale(1.05);
+}
+
+.press-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.press-section .press-item:hover .overlay {
+    opacity: 1;
+}
+
+.press-section .overlay h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.press-section .overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.press-section .overlay a {
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.press-section .overlay a:hover {
+    background-color: #c0392b;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/safir.png" align="klassy cafe html template">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Ana Sayfa</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Hakkımızda</a></li>
+                           	
+                        <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop Down Page 1</a></li>
+                                    <li><a href="#">Drop Down Page 2</a></li>
+                                    <li><a href="#">Drop Down Page 3</a></li>
+                                </ul>
+                            </li>
+                        -->
+                            
+                            <li class="scroll-to-section"><a href="index.html">Rezervasyon</a></li> 
+                            <li class="submenu">
+                            <a href="javascript:;">Şubelerimiz</a>
+                            <ul>
+                                <li><a href="istanbul.html">İstanbul Safir</a></li>
+                                <li><a href="izmir.html">İzmir Safir</a></li>
+                            </ul>
+                          </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Ürünlerimiz</a>
+                                <ul>
+                                    <li><a href="baslangiclar.html">Başlangıçlar</a></li>
+                                    <li><a href="anaYemek.html">Ana Yemekler</a></li>
+                                    <li><a href="tatlilar.html">Tatlılar</a></li>
+                                </ul>
+                            </li>
+                           
+                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                            <li><a href="duyurular.html">Duyurular</a></li>
+                            <li><a href="iletisim.html">İletişim</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <section class="announcement-section py-5">
+        <div class="container">
+            <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Slider Göstergeleri -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <!-- Slider İçeriği -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/images/restoran1.jpg" class="d-block w-100 rounded" alt="Etkinlik 1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text">
+                                    <h2>Lezzet Atölyesi 🍴</h2>
+                                    <p>
+                                        Ünlü şeflerimizle mutfakta harikalar yaratacağınız bir atölyeye katılın. 
+                                        Bu etkinlikte özel tarifler öğrenip keyifli bir gün geçireceksiniz.
+                                    </p>
+                                    <p><b>Yerinizi ayırtmayı unutmayın!</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/images/restoran2.jpg" class="d-block w-100 rounded" alt="Etkinlik 2">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text">
+                                    <h2>Canlı Müzik Akşamı 🎶</h2>
+                                    <p>
+                                        Bu hafta sonu Safir Restoran'da canlı müzik eşliğinde yemek keyfi sizleri bekliyor. 
+                                        Sevdiklerinizle unutulmaz bir akşam geçirin.
+                                    </p>
+                                    <p><b>Rezervasyon için hemen arayın!</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/images/restoran3.jpg" class="d-block w-100 rounded" alt="Etkinlik 3">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text">
+                                    <h2>Yeni Menü Tanıtımı 🍽️</h2>
+                                    <p>
+                                        Safir Restoran'ın yepyeni menüsü sizlerle! En taze malzemelerle hazırlanmış lezzetlerimizi keşfetmek için davetlisiniz.
+                                    </p>
+                                    <p><b>Lezzet tutkunlarını bekliyoruz!</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Önceki ve Sonraki Butonlar -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="press-section">
+        <div class="container">
+            <h3 class="text-center mb-4">Basında Biz</h3>
+            <div class="row">
+                <!-- İlk Haber -->
+                <div class="col-md-4">
+                    <div class="press-item">
+                        <img src="assets/images/restoran.jpg" alt="Habertürk" class="img-fluid rounded shadow-sm">
+                        <div class="overlay text-center">
+                            <h5>Habertürk</h5>
+                            <p>Safir Restoran'dan Özel Tarifler</p>
+                            <a href="https://www.haberturk.com" target="_blank" class="btn btn-danger btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- İkinci Haber -->
+                <div class="col-md-4">
+                    <div class="press-item">
+                        <img src="assets/images/restoran2.jpg" alt="CNN Türk" class="img-fluid rounded shadow-sm">
+                        <div class="overlay text-center">
+                            <h5>CNN Türk</h5>
+                            <p>Lezzet Ödülü Sahibi</p>
+                            <a href="https://www.cnnturk.com" target="_blank" class="btn btn-danger btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Üçüncü Haber -->
+                <div class="col-md-4">
+                    <div class="press-item">
+                        <img src="assets/images/restoran3.jpg" alt="Milliyet" class="img-fluid rounded shadow-sm">
+                        <div class="overlay text-center">
+                            <h5>Milliyet</h5>
+                            <p>İstanbul'un Yeni Gözdesi</p>
+                            <a href="https://www.milliyet.com.tr" target="_blank" class="btn btn-danger btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Dördüncü Haber-->
+                <div class="col-md-4">
+                    <div class="press-item">
+                        <img src="assets/images/restoran3.jpg" alt="Milliyet" class="img-fluid rounded shadow-sm">
+                        <div class="overlay text-center">
+                            <h5>Milliyet</h5>
+                            <p>İstanbul'un Yeni Gözdesi</p>
+                            <a href="https://www.milliyet.com.tr" target="_blank" class="btn btn-danger btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Beşinci Haber-->
+                <div class="col-md-4">
+                    <div class="press-item">
+                        <img src="assets/images/restoran3.jpg" alt="Milliyet" class="img-fluid rounded shadow-sm">
+                        <div class="overlay text-center">
+                            <h5>Milliyet</h5>
+                            <p>İstanbul'un Yeni Gözdesi</p>
+                            <a href="https://www.milliyet.com.tr" target="_blank" class="btn btn-danger btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

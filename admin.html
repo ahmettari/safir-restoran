@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safir Restoran - Admin Paneli</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #592a22;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #4c241d;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #592a22;
+        }
+
+        .navbar .navbar-brand {
+            color: #592a22;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #592a22;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .btn-custom {
+            background-color: #592a22;
+            color: white;
+            border: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #4c241d;
+        }
+
+        .table th {
+            background-color: #592a22;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .table td {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+
+        .badge.bg-success {
+            background-color: #4c241d !important;
+            color: white;
+        }
+
+        .badge.bg-warning {
+            background-color: #804c43 !important;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admin.html" class="active"><i class="fa fa-dashboard"></i> Ana Sayfa</a>
+        <a href="kullaniciYonetimi.html"><i class="fa fa-users"></i> Kullanıcı Yönetimi</a>
+        <a href="duyurularAdmin.html"><i class="fa fa-bell"></i> Duyurular</a>
+        <a href="menuAdmin.html"><i class="fa fa-cutlery"></i> Menü Yönetimi</a>
+        <a href="index.html"><i class="fa fa-sign-out"></i> Çıkış</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Admin Paneli</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Dashboard Cards -->
+        <div class="row my-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Kullanıcılar</h6>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">120</h5>
+                        <p class="card-text">Toplam Kullanıcı Sayısı</p>
+                        <a href="#" class="btn btn-custom btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Duyurular</h6>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">15</h5>
+                        <p class="card-text">Aktif Duyuru</p>
+                        <a href="#" class="btn btn-custom btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Menüler</h6>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">25</h5>
+                        <p class="card-text">Toplam Menü</p>
+                        <a href="#" class="btn btn-custom btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Rezervasyonlar</h6>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">30</h5>
+                        <p class="card-text">Bugünün Rezervasyonları</p>
+                        <a href="#" class="btn btn-custom btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card">
+            <div class="card-header">
+                <h6>Son Duyurular</h6>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                            <th>Tarih</th>
+                            <th>Durum</th>
+                            <th>Aksiyon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Canlı Müzik Akşamı</td>
+                            <td>2024-12-10</td>
+                            <td><span class="badge bg-success">Aktif</span></td>
+                            <td>
+                                <button class="btn btn-custom btn-sm">Düzenle</button>
+                                <button class="btn btn-danger btn-sm">Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lezzet Atölyesi</td>
+                            <td>2024-12-15</td>
+                            <td><span class="badge bg-warning">Pasif</span></td>
+                            <td>
+                                <button class="btn btn-custom btn-sm">Düzenle</button>
+                                <button class="btn btn-danger btn-sm">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
