@@ -2,7 +2,7 @@
 #
 
 
-Adsız tasarım.png
+
 # Genel Proje Özeti
 - Kullanıcı Dostu Tasarım: Safir Restoran web sitesi, lüks fine dining bir restoranın çizgilerini yansıtacak şekilde tasarlanmış ve kullanıcı deneyimini merkeze almış. Sayfaların düzeni, gezinme kolaylığı ve sadeliği bu amaca hizmet ediyor.
 - Admin Panel: Yönetimsel işlemler için admin panel tasarlanmış, bu panel üzerinden rezervasyonlar, duyurular, kullanıcı yönetimi ve menü düzenlemeleri yapılabiliyor. Admin panelde istatistiksel bilgiler ve grafikler, restoran yönetimini kolaylaştıracak bir yapı sunuyor.
